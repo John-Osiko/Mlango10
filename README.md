@@ -30,23 +30,24 @@ A user would:
 * Bootstrap
 
 ## Build
-* Clone the repositories
+* Clone the repositories<br>
     `git clone https://github.com/John-Osiko/Mlango10.git`
-* Open root directory
+* Open root directory<br>
     `cd Mlango10`
 * Install requirements
     `python -m pip install -r requirements.txt`
-* Create a database
+* Create a database<br>
     `psql`<br>
     `CREATE DATABASE {database name}`
-* Export configurations
+* Export configurations<br>
     `export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://{User Name}:{password}@localhost/{database name}`
-* Migrate database
-    `python3 manage.py makemigrations {database name}`<br>
-    `python3 manage.py migrate`
-* Run the application
+* Migrate database<br>
+    `python3 manage.py makemigrations {app name}`<br>
+    `python3 manage.py migrate`<br>
+    `python3 manage.py sqlmigrate 000{index no.}`
+* Run the application<br>
     `python3.6 manage.py runserver`
-* Run tests on the application
+* Run tests on the application<br>
     `python3.6 manage.py test`
 
 ## Support and Contact Details
