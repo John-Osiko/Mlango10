@@ -1,0 +1,36 @@
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark secondary-color lighten-1">
+  <a class="navbar-brand" href="#">Mlango10</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+    aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"><a href="/"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
+
+      <li class="nav-item active"><a href="{% url 'add_hood' %}"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Add Hood</span></a>
+
+      <li class="nav-item active"><a href="{% url 'add_business' %}"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Add Business</span></a></li>
+
+      <li class="nav-item active container-fluid"><a href="{% url 'add_emergency' %}"><img class="rounded-circle container-fluid mx-auto" src="../../static/images/red_lights.jpg" height="125px" width="125px"><span class="hidden-xs hidden-sm">Emergency</span></a></li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.username}}</a>
+        <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
+          <a class="dropdown-item" href="{% url 'edit_profile' user.profile.name%}">Edit Profile</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light"><i class="fas fa-envelope"></i></a>
+      </li>
+      <li class="nav-item avatar dropdown">
+            <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-55">
+            <img class="rounded-circle account-img d-block mx-auto" src="{{user.profile.profile_pic.url}}" height="125px" width="125px">
+            <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
